@@ -1,0 +1,9 @@
+{
+    // required
+    "name": "input_test",
+    // required
+    "version": "0.0.1",
+    "dependencies" : {
+        "express": "*"
+    }
+}
