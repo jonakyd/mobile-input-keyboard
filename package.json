@@ -1,11 +1,10 @@
 {
     "name": "input_test",
     "desciption": "test input behavior in different platform",
-    "keywords": ["input", "ender"],
+    "keywords": ["input"],
     "author": "Jonathan Dang",
     "version": "0.0.1",
     "dependencies" : {
         "express": "*"
-    },
-    "ender": "./www/libs/ender.js"
+    }
 }
