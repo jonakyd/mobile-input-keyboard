@@ -4,7 +4,17 @@
         <title>InputTest</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, user-scalable=no" />
-        <script type="text/javascript" src="libs/ender.min.js"></script>
+        <script type="text/javascript" src="libs/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                console.log('window.innerHeight : ' + $(window).height());
+                console.log('window.innerWidth : ' + $(window).width());
+                $('.outer-wrapper').width($(window).width()).height($(window).height());
+                $('body').on('touchstart touchend touchmove touchcancel', function(e) {
+                    // e.preventDefault();
+                });
+            });
+        </script>
         <link rel="stylesheet" href="libs/reset.css">
         <style type="text/css">
             body {
@@ -47,7 +57,7 @@
     </head>
     <body>
         <div class="outer-wrapper">
-            <div id="wrapper" class="inner-wrapper">
+            <div class="inner-wrapper">
                 <form action="">
                     <div class="auth">
                         <input type="text" placeholder="Input Text" />
@@ -77,23 +87,4 @@
             </div>  
         </div>
     </body>
-    <script type="text/javascript">
-    var iScroll = require('iscroll');
-    debugger;
- 
-        $(function() {
-          var iScroll = require('iscroll')
-             ,myScroll = new iSroll('wrapper');
-
-          debugger;
-          console.log('window.innerHeight : ' + $(window).height());
-          console.log('window.innerWidth : ' + $(window).width());
-          // set single page app width, height
-          $('.outer-wrapper').width($(window).width()).height($(window).height());
-          // nullify touch event
-          $('body').on('touchstart touchend touchmove touchcancel', function(e) {
-              // e.preventDefault();
-          });
-        });
-    </script>
 </html>
